@@ -1,0 +1,85 @@
+
+* {
+    font-size: 100%;
+    font-family: Arial;
+}
+
+.master-div{
+    text-align: center;
+}
+
+.profile-card{
+    width: 22%;
+    height: 70%;
+    background: #EFF1F0;
+    border: 1px solid #C8CAC8;
+    border-radius: 7px;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    box-shadow: 0 0 8px rgb(200, 202, 200);
+    padding: 10px;
+}
+
+.profile-card p img{
+    border-radius: 50%;
+}
+
+.employee-name{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.profession{
+    margin-top: 0;
+    color: #A6A7A6;
+    font-size: 20px;
+}
+
+.details{
+    text-align: justify;
+    color: #7B7E7B;
+    margin-bottom: 30px;
+}
+
+.work span{
+   width: 33%;
+   float: left;
+   margin-bottom: 20px;
+}
+
+.follow{
+    clear: both;
+    margin-top: 30px;
+}
+
+.follow button{
+    padding: 10px 20px;
+    border-radius: 7px 0;
+    width: 40%;
+}
+
+.hire-me{
+    background: #000000;
+    color: #ffffff;
+}
+
+.contact{
+    position: absolute;
+    bottom:0;
+    font-size: 13px;
+    font-style: italic;
+    color: #7B7E7B;
+}
+
+.contact span{
+    color: #000000;
+}
+
+.contact .email{
+    color: #000000;
+}
+.experience{
+    color: #000000
+}
