@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="card">
+            <div class="card-heading bg-primary col-form-label text-white text-center">Calculator</div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" class="form-control" placeholder="Input One (Number Only)" id="input_one">
+                        </div>
+                        <div class="col-md-2">
+                            <select name="actions" id="oinput" class="form-control">
+								<option value="+">Addition (+)</option>
+								<option value="-">Subtraction (-)</option>
+								<option value="*">Multiplication (*)</option>
+								<option value="/">Division (/)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="input_two" class="form-control" placeholder="Input Two (Number Only)">
+                        </div>
+                        <div class="col-md-1">
+                            <div class="btn btn-primary" onclick="CalculateFunction()">Calculate</div>
+                        </div>
+                    </div>
+					 <br>
+					<div class='row'>
+							<div class="col-md-12 alert alert-success">										
+							<span>RESULT : </span><span id="output-data"></span>
+						</div>
+					</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+	  function CalculateFunction(){
+		var inputOne = document.getElementById('input_one').value;
+		var oinput = document.getElementById('oinput').value;
+		var inputTwo = document.getElementById('input_two').value;
+
+		if(!inputOne && !oinput && !inputTwo){
+		  document.getElementById("output-data").innerHTML =  "Must Be Required All Field";
+		}else{
+		  if (oinput == '+'){
+			document.getElementById("output-data").innerHTML =  parseInt(inputOne) + parseInt(inputTwo);
+		  }
+		  if (oinput == '-'){
+			document.getElementById("output-data").innerHTML = parseInt(inputOne) - parseInt(inputTwo);
+		  }
+		  if (oinput == '*'){
+			document.getElementById("output-data").innerHTML = parseInt(inputOne) * parseInt(inputTwo);
+		  }
+		  if (oinput == '/'){
+			document.getElementById("output-data").innerHTML = parseInt(inputOne) / parseInt(inputTwo);
+		  }
+		}
+	  }
+	</script>
+</body>
+</html>
